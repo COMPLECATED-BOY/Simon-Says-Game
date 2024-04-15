@@ -9,27 +9,30 @@ let Colors = ["red", "yellow", "green", "purple"];
 let msg = document.getElementById("msg");
 let Allbtns = document.getElementsByClassName("btn");
 
-document.addEventListener("keypress", function () {
+document.addEventListener("keypress",start);
+document.addEventListener("click",start);
+
+function start(){
   if (!started) {
     started=true;
     console.log("The game is Started");
     levelUp();
   }
-});
+}
 
 function gameFlash(btn) {
   btn.classList.add("gameflash");
   started = true;
   setTimeout(() => {
     btn.classList.remove("gameflash");
-  }, 200);
+  }, 400);
 }
 
 function userFlash(btn) {
   btn.classList.add("userflash");
   setTimeout(() => {
     btn.classList.remove("userflash");
-  }, 200);
+  }, 300);
 }
 
 function levelUp() {
@@ -67,10 +70,10 @@ function checkAns(idx){
         }
     }else{
         msg.innerHTML=`Game Over! Your score is <span>${level-1}</span> Press any key to start again`;
-        document.body.style.backgroundColor="red";
+        document.body.classList.add("over")
         setTimeout(()=>{
-          document.body.style.backgroundColor="white";
-        },150)
+          document.body.classList.remove("over");
+        },200)
         reset();
     }
 }

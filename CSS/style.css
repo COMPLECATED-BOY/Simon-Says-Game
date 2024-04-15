@@ -1,63 +1,93 @@
-*{
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 body{
-    padding: 20px;
-    text-align: center;
-    line-height: 2;
+    background-color: wheat;
+    color: #211515;
+    transition: all .2s ease;
+}
+.game-container {
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  line-height: 1.4;
+  min-height: 100dvh;
+  max-width: 500px;
+}
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: transparent;
+  background-image: linear-gradient(90deg,#ff0303,#e30303,#9d9d04,#7c7802,#14ff03,#11e303,#c703ff,#a703e3);
+  -webkit-background-clip: text;
+  margin-top: 1rem;
+}
+h3 {
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 15px;
+}
+.container {
+  margin-top: 2rem;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 1fr 1fr;
 }
 
-h2{
-    height: 4rem;
-    font-family:monospace;
-    font-weight: 100;
+.btn {
+  border-radius: 10px;
+  border: 5px solid #6d6d6d;
+  box-shadow: rgb(241, 157, 157) 0px 0px 10px;
+  transition: all ease .2s;
 }
-h2 span{
-    color: rgb(152, 16, 16);
-    font-weight: 600;
-}
-.container{
-    width: 60%;
-    margin: 2rem auto;
-    gap:40px;
-    display: grid;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 200px 200px;
-    justify-content: center;
-    align-items: center;
+.btn:active{
+    scale: .98;
 }
 
-.btn{
-    height: 100%;
-    width: 100%;
-    border: 10px solid black;
-    border-radius: 15%;
+@media screen and (min-width: 500px) {
+  h2 {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+
+  }
+  h3 {
+    font-size: 20px;
+  }
 }
 
-.red{
-    background-color:rgba(255, 0, 0, 0.712);
+.red {
+  background: linear-gradient(145deg, #ff0303, #e30303);
 }
 
-.yellow{
-    background-color: rgba(255, 255, 0, 0.712);
+.yellow {
+  background: linear-gradient(145deg, #ffff03, #e3dc03);
 }
 
-.green{
-    background-color:rgba(4, 251, 4, 0.712);
+.green {
+  background: linear-gradient(145deg, #14ff03, #11e303);
 }
 
-.purple{
-    background-color:rgba(253, 1, 253, 0.712);
+.purple {
+  background: linear-gradient(145deg, #c703ff, #a703e3);
 }
 
-.gameflash{
-    background-color:#FFFd;
+.gameflash {
+  background: linear-gradient(145deg, #120404, #473636);
+  transition: all .3s ease;
+  
 }
-.userflash{
-    background-color: rgb(38, 5, 148);
+.userflash {
+  background: linear-gradient(145deg, #01feff, #01d5e5);
+}
+
+.over{
+    background-color: #6d6d6d;
+    color: white;
+   
 }
 
